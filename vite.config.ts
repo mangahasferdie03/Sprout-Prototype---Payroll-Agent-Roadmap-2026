@@ -13,6 +13,10 @@ export default defineConfig(({ mode }) => {
         port: parseInt(process.env.PORT || '3000'),
         host: '0.0.0.0',
         strictPort: true,
+        allowedHosts: [
+          'sprout-prototype-payroll-agent-roadmap-2026-production.up.railway.app',
+          '.railway.app'
+        ],
       },
       plugins: [react()],
       define: {
