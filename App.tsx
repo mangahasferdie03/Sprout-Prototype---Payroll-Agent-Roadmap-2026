@@ -279,6 +279,7 @@ const App: React.FC = () => {
                       key={item.id}
                       item={item}
                       onClick={() => selectedProduct === 'friday' ? setSelectedAgent(item) : undefined}
+                      isJarvis={selectedProduct === 'jarvis'}
                     />
                   ))}
                 </div>
@@ -298,6 +299,7 @@ const App: React.FC = () => {
                       key={item.id}
                       item={item}
                       onClick={() => selectedProduct === 'friday' ? setSelectedAgent(item) : undefined}
+                      isJarvis={selectedProduct === 'jarvis'}
                     />
                   ))}
                 </div>
@@ -317,6 +319,7 @@ const App: React.FC = () => {
                       key={item.id}
                       item={item}
                       onClick={() => selectedProduct === 'friday' ? setSelectedAgent(item) : undefined}
+                      isJarvis={selectedProduct === 'jarvis'}
                     />
                   ))}
                 </div>
@@ -336,6 +339,7 @@ const App: React.FC = () => {
                       key={item.id}
                       item={item}
                       onClick={() => selectedProduct === 'friday' ? setSelectedAgent(item) : undefined}
+                      isJarvis={selectedProduct === 'jarvis'}
                     />
                   ))}
                 </div>
@@ -376,7 +380,12 @@ const App: React.FC = () => {
   );
 };
 
-const AgentCard: React.FC<{ item: AgentItem; onClick: () => void }> = ({ item, onClick }) => {
+const AgentCard: React.FC<{ item: AgentItem; onClick: () => void; isJarvis?: boolean }> = ({ item, onClick, isJarvis = false }) => {
+  // Split title for all Jarvis categories
+  const titleParts = isJarvis && item.title.includes(' - ')
+    ? item.title.split(' - ')
+    : null;
+
   return (
     <button
       onClick={onClick}
@@ -393,15 +402,27 @@ const AgentCard: React.FC<{ item: AgentItem; onClick: () => void }> = ({ item, o
           )}
         </div>
         <div className="flex-1 min-w-0">
-          <h3 className="text-sm font-bold text-slate-900 group-hover:text-sprout-700 transition-colors truncate">{item.title}</h3>
-          <p className="text-[11px] text-slate-500 mt-0.5 line-clamp-2 leading-snug">{item.shortDescription}</p>
+          {titleParts ? (
+            <>
+              <h3 className="text-sm font-bold text-slate-900 group-hover:text-sprout-700 transition-colors truncate">{titleParts[0]}</h3>
+              <p className="text-xs text-slate-600 mt-0.5">{titleParts[1]}</p>
+            </>
+          ) : (
+            <h3 className="text-sm font-bold text-slate-900 group-hover:text-sprout-700 transition-colors truncate">{item.title}</h3>
+          )}
 
-          <div className="mt-2 flex items-center gap-2">
-            <div className="flex items-center gap-1 bg-slate-50 border border-slate-100 rounded-md px-1.5 py-0.5">
-              <svg className="w-2.5 h-2.5 text-sprout-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
-              <span className="text-[9px] font-semibold text-slate-700">{item.goals[0].value.replace(/^[↑↓]\s*/, '')}</span>
+          {!isJarvis && (
+            <p className="text-[11px] text-slate-500 mt-0.5 line-clamp-2 leading-snug">{item.shortDescription}</p>
+          )}
+
+          {!isJarvis && (
+            <div className="mt-2 flex items-center gap-2">
+              <div className="flex items-center gap-1 bg-slate-50 border border-slate-100 rounded-md px-1.5 py-0.5">
+                <svg className="w-2.5 h-2.5 text-sprout-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                <span className="text-[9px] font-semibold text-slate-700">{item.goals[0].value.replace(/^[↑↓]\s*/, '')}</span>
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
     </button>
