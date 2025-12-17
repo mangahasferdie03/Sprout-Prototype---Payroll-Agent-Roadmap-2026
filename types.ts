@@ -39,6 +39,7 @@ export interface AgentItem {
   goals: GoalMetric[];
   technicalDetails: string[];
   chatScenarios: ChatScenario[];
+  category?: string; // For Jarvis agents: 'Employee', 'People Leader', 'HR Manager', 'Sprout Internal'
   // Profile content
   whatItSolves?: {
     paragraphs: string[];

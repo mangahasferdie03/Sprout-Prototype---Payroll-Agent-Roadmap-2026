@@ -307,3 +307,319 @@ export const ROADMAP_DATA: AgentItem[] = [
     ]
   }
 ];
+
+export const JARVIS_ROADMAP_DATA: AgentItem[] = [
+  // Q1 2026 - Employee Category
+  {
+    id: "jarvis-emp-q1-1",
+    title: "Records Agent - Self-serve COE",
+    shortDescription: "Coming soon",
+    fullDescription: "Employee category agent - details to be added",
+    horizon: Horizon.Q1,
+    icon: "📋",
+    goals: [{ type: GoalType.MAU, value: "TBD", description: "Placeholder" }],
+    technicalDetails: ["Details coming soon"],
+    chatScenarios: [],
+    category: "Employee"
+  },
+  {
+    id: "jarvis-emp-q1-2",
+    title: "Records Agent - Personal information w/o files",
+    shortDescription: "Coming soon",
+    fullDescription: "Employee category agent - details to be added",
+    horizon: Horizon.Q1,
+    icon: "📋",
+    goals: [{ type: GoalType.MAU, value: "TBD", description: "Placeholder" }],
+    technicalDetails: ["Details coming soon"],
+    chatScenarios: [],
+    category: "Employee"
+  },
+  {
+    id: "jarvis-emp-q1-3",
+    title: "Attendance Agent - Break monitoring",
+    shortDescription: "Coming soon",
+    fullDescription: "Employee category agent - details to be added",
+    horizon: Horizon.Q1,
+    icon: "📅",
+    goals: [{ type: GoalType.MAU, value: "TBD", description: "Placeholder" }],
+    technicalDetails: ["Details coming soon"],
+    chatScenarios: [],
+    category: "Employee"
+  },
+  {
+    id: "jarvis-emp-q1-4",
+    title: "Attendance Agent - Leave filing",
+    shortDescription: "Coming soon",
+    fullDescription: "Employee category agent - details to be added",
+    horizon: Horizon.Q1,
+    icon: "📅",
+    goals: [{ type: GoalType.MAU, value: "TBD", description: "Placeholder" }],
+    technicalDetails: ["Details coming soon"],
+    chatScenarios: [],
+    category: "Employee"
+  },
+  // Q2 2026 - Employee Category
+  {
+    id: "jarvis-emp-q2-1",
+    title: "Concierge Agent 2.0 - Agentic implementation",
+    shortDescription: "Coming soon",
+    fullDescription: "Employee category agent - details to be added",
+    horizon: Horizon.Q2,
+    icon: "💬",
+    goals: [{ type: GoalType.MAU, value: "TBD", description: "Placeholder" }],
+    technicalDetails: ["Details coming soon"],
+    chatScenarios: [],
+    category: "Employee"
+  },
+  {
+    id: "jarvis-emp-q2-2",
+    title: "Sidekick - Concierge in Sidekick",
+    shortDescription: "Coming soon",
+    fullDescription: "Employee category agent - details to be added",
+    horizon: Horizon.Q2,
+    icon: "💬",
+    goals: [{ type: GoalType.MAU, value: "TBD", description: "Placeholder" }],
+    technicalDetails: ["Details coming soon"],
+    chatScenarios: [],
+    category: "Employee"
+  },
+  // Q3 2026 - Employee Category
+  {
+    id: "jarvis-emp-q3-1",
+    title: "Attendance Agent - OT/UT filing",
+    shortDescription: "Coming soon",
+    fullDescription: "Employee category agent - details to be added",
+    horizon: Horizon.Q3,
+    icon: "📅",
+    goals: [{ type: GoalType.MAU, value: "TBD", description: "Placeholder" }],
+    technicalDetails: ["Details coming soon"],
+    chatScenarios: [],
+    category: "Employee"
+  },
+  // Q4 2026 - Employee Category
+  {
+    id: "jarvis-emp-q4-1",
+    title: "Records Agent - HR records",
+    shortDescription: "Coming soon",
+    fullDescription: "Employee category agent - details to be added",
+    horizon: Horizon.Q4,
+    icon: "📋",
+    goals: [{ type: GoalType.MAU, value: "TBD", description: "Placeholder" }],
+    technicalDetails: ["Details coming soon"],
+    chatScenarios: [],
+    category: "Employee"
+  },
+  // Q2 2026 - People Leader Category
+  {
+    id: "jarvis-pl-q2-1",
+    title: "Pulse Agent - Sentiment collection",
+    shortDescription: "Coming soon",
+    fullDescription: "People Leader category agent - details to be added",
+    horizon: Horizon.Q2,
+    icon: "💭",
+    goals: [{ type: GoalType.MAU, value: "TBD", description: "Placeholder" }],
+    technicalDetails: ["Details coming soon"],
+    chatScenarios: [],
+    category: "People Leader"
+  },
+  // Q3 2026 - People Leader Category
+  {
+    id: "jarvis-pl-q3-1",
+    title: "Stand-up Agent - Daily/weekly updates collection",
+    shortDescription: "Coming soon",
+    fullDescription: "People Leader category agent - details to be added",
+    horizon: Horizon.Q3,
+    icon: "📊",
+    goals: [{ type: GoalType.MAU, value: "TBD", description: "Placeholder" }],
+    technicalDetails: ["Details coming soon"],
+    chatScenarios: [],
+    category: "People Leader"
+  },
+  {
+    id: "jarvis-pl-q3-2",
+    title: "Insights Agent - Team insights for managers",
+    shortDescription: "Coming soon",
+    fullDescription: "People Leader category agent - details to be added",
+    horizon: Horizon.Q3,
+    icon: "📈",
+    goals: [{ type: GoalType.MAU, value: "TBD", description: "Placeholder" }],
+    technicalDetails: ["Details coming soon"],
+    chatScenarios: [],
+    category: "People Leader"
+  },
+  // Q4 2026 - People Leader Category
+  {
+    id: "jarvis-pl-q4-1",
+    title: "Career Agent - Individual KPI collection",
+    shortDescription: "Coming soon",
+    fullDescription: "People Leader category agent - details to be added",
+    horizon: Horizon.Q4,
+    icon: "🎯",
+    goals: [{ type: GoalType.MAU, value: "TBD", description: "Placeholder" }],
+    technicalDetails: ["Details coming soon"],
+    chatScenarios: [],
+    category: "People Leader"
+  },
+  // Q1 2026 - HR Manager Category
+  {
+    id: "jarvis-hrm-q1-1",
+    title: "Agent Analytics Module - Sidekick adoption",
+    shortDescription: "Coming soon",
+    fullDescription: "HR Manager category agent - details to be added",
+    horizon: Horizon.Q1,
+    icon: "📊",
+    goals: [{ type: GoalType.MAU, value: "TBD", description: "Placeholder" }],
+    technicalDetails: ["Details coming soon"],
+    chatScenarios: [],
+    category: "HR Manager"
+  },
+  {
+    id: "jarvis-hrm-q1-2",
+    title: "HR Desk Module - Employee ticket management",
+    shortDescription: "Coming soon",
+    fullDescription: "HR Manager category agent - details to be added",
+    horizon: Horizon.Q1,
+    icon: "🎫",
+    goals: [{ type: GoalType.MAU, value: "TBD", description: "Placeholder" }],
+    technicalDetails: ["Details coming soon"],
+    chatScenarios: [],
+    category: "HR Manager"
+  },
+  {
+    id: "jarvis-hrm-q1-3",
+    title: "Sidekick Central - Agent feature flag settings",
+    shortDescription: "Coming soon",
+    fullDescription: "HR Manager category agent - details to be added",
+    horizon: Horizon.Q1,
+    icon: "⚙️",
+    goals: [{ type: GoalType.MAU, value: "TBD", description: "Placeholder" }],
+    technicalDetails: ["Details coming soon"],
+    chatScenarios: [],
+    category: "HR Manager"
+  },
+  // Q2 2026 - HR Manager Category
+  {
+    id: "jarvis-hrm-q2-1",
+    title: "Compliance Agent 2.0 - Agentic implementation",
+    shortDescription: "Coming soon",
+    fullDescription: "HR Manager category agent - details to be added",
+    horizon: Horizon.Q2,
+    icon: "✅",
+    goals: [{ type: GoalType.MAU, value: "TBD", description: "Placeholder" }],
+    technicalDetails: ["Details coming soon"],
+    chatScenarios: [],
+    category: "HR Manager"
+  },
+  {
+    id: "jarvis-hrm-q2-2",
+    title: "Agent Analytics Module - Sidekick ROI impact",
+    shortDescription: "Coming soon",
+    fullDescription: "HR Manager category agent - details to be added",
+    horizon: Horizon.Q2,
+    icon: "📊",
+    goals: [{ type: GoalType.MAU, value: "TBD", description: "Placeholder" }],
+    technicalDetails: ["Details coming soon"],
+    chatScenarios: [],
+    category: "HR Manager"
+  },
+  {
+    id: "jarvis-hrm-q2-3",
+    title: "Sidekick Central - New landing page",
+    shortDescription: "Coming soon",
+    fullDescription: "HR Manager category agent - details to be added",
+    horizon: Horizon.Q2,
+    icon: "🏠",
+    goals: [{ type: GoalType.MAU, value: "TBD", description: "Placeholder" }],
+    technicalDetails: ["Details coming soon"],
+    chatScenarios: [],
+    category: "HR Manager"
+  },
+  // Q3 2026 - HR Manager Category
+  {
+    id: "jarvis-hrm-q3-1",
+    title: "Insights Agent - Company insights for admins",
+    shortDescription: "Coming soon",
+    fullDescription: "HR Manager category agent - details to be added",
+    horizon: Horizon.Q3,
+    icon: "📈",
+    goals: [{ type: GoalType.MAU, value: "TBD", description: "Placeholder" }],
+    technicalDetails: ["Details coming soon"],
+    chatScenarios: [],
+    category: "HR Manager"
+  },
+  // Q1 2026 - Sprout Internal Category
+  {
+    id: "jarvis-si-q1-1",
+    title: "Info Agent 2.0 - Agentic implementation",
+    shortDescription: "Coming soon",
+    fullDescription: "Sprout Internal category agent - details to be added",
+    horizon: Horizon.Q1,
+    icon: "ℹ️",
+    goals: [{ type: GoalType.MAU, value: "TBD", description: "Placeholder" }],
+    technicalDetails: ["Details coming soon"],
+    chatScenarios: [],
+    category: "Sprout Internal"
+  },
+  {
+    id: "jarvis-si-q1-2",
+    title: "Direct Report Info Support - RBAC-based visibility",
+    shortDescription: "Coming soon",
+    fullDescription: "Sprout Internal category agent - details to be added",
+    horizon: Horizon.Q1,
+    icon: "🔐",
+    goals: [{ type: GoalType.MAU, value: "TBD", description: "Placeholder" }],
+    technicalDetails: ["Details coming soon"],
+    chatScenarios: [],
+    category: "Sprout Internal"
+  },
+  // Q3 2026 - Sprout Internal Category
+  {
+    id: "jarvis-si-q3-1",
+    title: "Finance Agent - Sprout Finances support",
+    shortDescription: "Coming soon",
+    fullDescription: "Sprout Internal category agent - details to be added",
+    horizon: Horizon.Q3,
+    icon: "💰",
+    goals: [{ type: GoalType.MAU, value: "TBD", description: "Placeholder" }],
+    technicalDetails: ["Details coming soon"],
+    chatScenarios: [],
+    category: "Sprout Internal"
+  },
+  {
+    id: "jarvis-si-q3-2",
+    title: "Keeper Agent - Sprout Keeper insights",
+    shortDescription: "Coming soon",
+    fullDescription: "Sprout Internal category agent - details to be added",
+    horizon: Horizon.Q3,
+    icon: "🔑",
+    goals: [{ type: GoalType.MAU, value: "TBD", description: "Placeholder" }],
+    technicalDetails: ["Details coming soon"],
+    chatScenarios: [],
+    category: "Sprout Internal"
+  },
+  // Q4 2026 - Sprout Internal Category
+  {
+    id: "jarvis-si-q4-1",
+    title: "Info Agent - CRF transactions*",
+    shortDescription: "Coming soon",
+    fullDescription: "Sprout Internal category agent - details to be added",
+    horizon: Horizon.Q4,
+    icon: "ℹ️",
+    goals: [{ type: GoalType.MAU, value: "TBD", description: "Placeholder" }],
+    technicalDetails: ["Details coming soon"],
+    chatScenarios: [],
+    category: "Sprout Internal"
+  },
+  {
+    id: "jarvis-si-q4-2",
+    title: "Upsell Agent - Sprout product upsell",
+    shortDescription: "Coming soon",
+    fullDescription: "Sprout Internal category agent - details to be added",
+    horizon: Horizon.Q4,
+    icon: "📈",
+    goals: [{ type: GoalType.MAU, value: "TBD", description: "Placeholder" }],
+    technicalDetails: ["Details coming soon"],
+    chatScenarios: [],
+    category: "Sprout Internal"
+  }
+];

@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import { ROADMAP_DATA } from './constants';
+import { ROADMAP_DATA, JARVIS_ROADMAP_DATA } from './constants';
 import { AgentItem, Horizon } from './types';
 import { AgentDetail } from './components/AgentDetail';
 import { LandingPage } from './components/LandingPage';
 import { UnifiedAgentChatModal } from './components/UnifiedAgentChatModal';
 
+type JarvisCategory = 'Employee' | 'People Leader' | 'HR Manager' | 'Sprout Internal';
+
 const App: React.FC = () => {
   const [started, setStarted] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState<'friday' | 'jarvis'>('friday');
+  const [selectedJarvisCategory, setSelectedJarvisCategory] = useState<JarvisCategory>('Employee');
   const [selectedAgent, setSelectedAgent] = useState<AgentItem | null>(null);
 
   // 0 = Initial, 1 = Q1, 2 = Q2, 3 = Q3, 4 = Q4
@@ -38,14 +42,29 @@ const App: React.FC = () => {
     }
   }, [started]);
 
+  // Select the appropriate roadmap data based on product
+  let activeRoadmapData = selectedProduct === 'friday' ? ROADMAP_DATA : JARVIS_ROADMAP_DATA;
+
+  // Filter by category for Jarvis
+  if (selectedProduct === 'jarvis') {
+    activeRoadmapData = activeRoadmapData.filter(agent => agent.category === selectedJarvisCategory);
+  }
+
   // Filter items by horizon
-  const q1Items = ROADMAP_DATA.filter(i => i.horizon === Horizon.Q1);
-  const q2Items = ROADMAP_DATA.filter(i => i.horizon === Horizon.Q2);
-  const q3Items = ROADMAP_DATA.filter(i => i.horizon === Horizon.Q3);
-  const q4Items = ROADMAP_DATA.filter(i => i.horizon === Horizon.Q4);
+  const q1Items = activeRoadmapData.filter(i => i.horizon === Horizon.Q1);
+  const q2Items = activeRoadmapData.filter(i => i.horizon === Horizon.Q2);
+  const q3Items = activeRoadmapData.filter(i => i.horizon === Horizon.Q3);
+  const q4Items = activeRoadmapData.filter(i => i.horizon === Horizon.Q4);
 
   // Handle merge animation
   const handleMerge = () => {
+    // Jarvis: Redirect to Figma prototype
+    if (selectedProduct === 'jarvis') {
+      window.location.href = 'https://www.figma.com/proto/eGQOJiZAaRMHsGxiTeNyDt/%F0%9F%94%B7%F0%9F%94%B6-Unified-Sidekick-Central--IN-PROG--HAND-OFF---Copy-?page-id=13%3A927&node-id=4906-52842&viewport=84%2C-173%2C0.13&t=xzZ9Wycr98Zfzbhk-8&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=4906%3A52842&hide-ui=1';
+      return;
+    }
+
+    // Friday: Existing merge animation
     setIsMerging(true);
     // After animation completes, show modal
     setTimeout(() => {
@@ -60,7 +79,10 @@ const App: React.FC = () => {
   };
 
   if (!started) {
-    return <LandingPage onEnter={() => setStarted(true)} />;
+    return <LandingPage onEnter={(product) => {
+      setSelectedProduct(product);
+      setStarted(true);
+    }} />;
   }
 
   return (
@@ -93,31 +115,58 @@ const App: React.FC = () => {
             
             {/* Main Visualization Card */}
             <div className="flex-1 bg-white rounded-3xl shadow-sm border border-slate-200 p-8 relative overflow-hidden">
-              
-              {/* Chart Header */}
-              <div className="flex items-center justify-between mb-8 relative z-10">
-                 <div>
-                    <h2 className="text-xl font-bold text-slate-900">Payroll Agent Roadmap 2026</h2>
-                    <p className="text-slate-500 text-sm mt-1">A focused rollout plan for automating core payroll operations</p>
-                 </div>
 
-                 {/* Try it Now Button */}
-                 {visibleStage === 4 && !isMerging && !showUnifiedModal && (
-                   <button
-                     onClick={handleMerge}
-                     className="relative bg-white/50 backdrop-blur-sm border border-slate-200 hover:border-sprout-400 text-slate-700 hover:text-sprout-700 px-4 py-2 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105 animate-pulse-border"
-                   >
-                     <span className="font-medium text-sm">Try it Now</span>
-                   </button>
-                 )}
+              {/* Chart Header */}
+              <div className={`relative z-10 ${selectedProduct === 'jarvis' ? 'bg-white pb-10' : 'mb-8'}`}>
+                <div className="flex items-center justify-between mb-2">
+                  <div>
+                    <h2 className="text-xl font-bold text-slate-900">
+                      {selectedProduct === 'friday' ? 'Payroll Agent Roadmap 2026' : 'Jarvis Roadmap 2026'}
+                    </h2>
+                    <p className="text-slate-500 text-sm mt-1">
+                      {selectedProduct === 'friday'
+                        ? 'A focused rollout plan for automating core payroll operations'
+                        : 'Intelligent HR agents designed to streamline people operations and employee experiences'}
+                    </p>
+                  </div>
+
+                  {/* Try it Now Button */}
+                  {visibleStage === 4 && !isMerging && !showUnifiedModal && (
+                    <button
+                      onClick={handleMerge}
+                      className="relative bg-white/50 backdrop-blur-sm border border-slate-200 hover:border-sprout-400 text-slate-700 hover:text-sprout-700 px-4 py-2 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105 animate-pulse-border"
+                    >
+                      <span className="font-medium text-sm">Try it Now</span>
+                    </button>
+                  )}
+                </div>
+
+                {/* Jarvis Category Chips */}
+                {selectedProduct === 'jarvis' && (
+                  <div className="flex items-center gap-2 mt-4">
+                    {(['Employee', 'People Leader', 'HR Manager', 'Sprout Internal'] as JarvisCategory[]).map((category) => (
+                      <button
+                        key={category}
+                        onClick={() => setSelectedJarvisCategory(category)}
+                        className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                          selectedJarvisCategory === category
+                            ? 'bg-sprout-500 text-white shadow-md'
+                            : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                        }`}
+                      >
+                        {category}
+                      </button>
+                    ))}
+                  </div>
+                )}
               </div>
 
               {/* Grid Background */}
-              <div className="absolute inset-0 top-24 border-t border-slate-100 bg-[linear-gradient(to_right,#f1f5f9_1px,transparent_1px),linear-gradient(to_bottom,#f1f5f9_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
+              <div className={`absolute inset-0 ${selectedProduct === 'jarvis' ? 'top-50' : 'top-24'} border-t border-slate-100 bg-[linear-gradient(to_right,#f1f5f9_1px,transparent_1px),linear-gradient(to_bottom,#f1f5f9_1px,transparent_1px)] bg-[size:4rem_4rem]`}></div>
 
               {/* The Curve SVG - Revealed via Clip Path */}
               <div
-                className={`absolute inset-0 top-32 bottom-12 w-full pointer-events-none ${
+                className={`absolute inset-0 ${selectedProduct === 'jarvis' ? 'top-60' : 'top-32'} bottom-12 w-full pointer-events-none ${
                   isMerging ? 'transition-opacity duration-[1500ms] opacity-0' : 'transition-all duration-[1200ms] ease-in-out'
                 }`}
                 style={{
@@ -191,7 +240,11 @@ const App: React.FC = () => {
                   transformOrigin: 'center'
                 } : {}}>
                   {q1Items.map((item) => (
-                    <AgentCard key={item.id} item={item} onClick={() => setSelectedAgent(item)} />
+                    <AgentCard
+                      key={item.id}
+                      item={item}
+                      onClick={() => selectedProduct === 'friday' ? setSelectedAgent(item) : undefined}
+                    />
                   ))}
                 </div>
 
@@ -206,7 +259,11 @@ const App: React.FC = () => {
                   transformOrigin: 'center'
                 } : {}}>
                   {q2Items.map((item) => (
-                    <AgentCard key={item.id} item={item} onClick={() => setSelectedAgent(item)} />
+                    <AgentCard
+                      key={item.id}
+                      item={item}
+                      onClick={() => selectedProduct === 'friday' ? setSelectedAgent(item) : undefined}
+                    />
                   ))}
                 </div>
 
@@ -221,7 +278,11 @@ const App: React.FC = () => {
                   transformOrigin: 'center'
                 } : {}}>
                   {q3Items.map((item) => (
-                    <AgentCard key={item.id} item={item} onClick={() => setSelectedAgent(item)} />
+                    <AgentCard
+                      key={item.id}
+                      item={item}
+                      onClick={() => selectedProduct === 'friday' ? setSelectedAgent(item) : undefined}
+                    />
                   ))}
                 </div>
 
@@ -236,7 +297,11 @@ const App: React.FC = () => {
                   transformOrigin: 'center'
                 } : {}}>
                   {q4Items.map((item) => (
-                    <AgentCard key={item.id} item={item} onClick={() => setSelectedAgent(item)} />
+                    <AgentCard
+                      key={item.id}
+                      item={item}
+                      onClick={() => selectedProduct === 'friday' ? setSelectedAgent(item) : undefined}
+                    />
                   ))}
                 </div>
 
