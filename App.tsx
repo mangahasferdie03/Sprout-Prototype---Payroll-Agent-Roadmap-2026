@@ -91,7 +91,42 @@ const App: React.FC = () => {
       {/* Top Navigation */}
       <header className="h-20 bg-white border-b border-slate-200 flex items-center px-8 flex-shrink-0 z-40">
          <div>
-            <h1 className="text-2xl font-bold text-slate-900">Sidekick Tribe</h1>
+            {/* Breadcrumb Navigation */}
+            <div className="flex items-center gap-2 mb-1">
+              <button
+                onClick={() => setStarted(false)}
+                className="text-lg font-bold text-slate-900 hover:text-sprout-600 transition-colors"
+              >
+                Sidekick Tribe
+              </button>
+              <span className="text-slate-400">›</span>
+
+              {/* Product Switcher */}
+              <div className="flex gap-2">
+                <button
+                  onClick={() => setSelectedProduct('friday')}
+                  className={`px-3 py-1 rounded-md text-sm font-semibold transition-all ${
+                    selectedProduct === 'friday'
+                      ? 'bg-sprout-500 text-white'
+                      : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                  }`}
+                >
+                  FRIDAY
+                </button>
+                <button
+                  onClick={() => setSelectedProduct('jarvis')}
+                  className={`px-3 py-1 rounded-md text-sm font-semibold transition-all ${
+                    selectedProduct === 'jarvis'
+                      ? 'bg-sprout-500 text-white'
+                      : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                  }`}
+                >
+                  JARVIS
+                </button>
+              </div>
+            </div>
+
+            {/* Subtitle */}
             <div className="text-sm text-slate-500">
               <span>Foundation of Sprout's next-generation workflow automation</span>
             </div>
@@ -166,7 +201,7 @@ const App: React.FC = () => {
 
               {/* The Curve SVG - Revealed via Clip Path */}
               <div
-                className={`absolute inset-0 ${selectedProduct === 'jarvis' ? 'top-60' : 'top-32'} bottom-12 w-full pointer-events-none ${
+                className={`absolute inset-0 top-32 bottom-12 w-full pointer-events-none ${
                   isMerging ? 'transition-opacity duration-[1500ms] opacity-0' : 'transition-all duration-[1200ms] ease-in-out'
                 }`}
                 style={{
@@ -230,7 +265,7 @@ const App: React.FC = () => {
               <div className="absolute inset-0 top-32 z-20">
 
                 {/* Q1 Group */}
-                <div className={`absolute left-[1%] bottom-[28%] w-[23%] flex flex-col gap-4 ${
+                <div className={`absolute left-[1%] ${selectedProduct === 'jarvis' ? 'bottom-[18%]' : 'bottom-[28%]'} w-[23%] flex flex-col gap-4 ${
                   isMerging
                     ? 'transition-all duration-[1500ms] ease-in-out'
                     : `transition-all duration-700 ${visibleStage >= 1 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`
@@ -249,7 +284,7 @@ const App: React.FC = () => {
                 </div>
 
                 {/* Q2 Group */}
-                <div className={`absolute left-[26%] bottom-[46%] w-[23%] flex flex-col gap-4 ${
+                <div className={`absolute left-[26%] ${selectedProduct === 'jarvis' ? 'bottom-[36%]' : 'bottom-[46%]'} w-[23%] flex flex-col gap-4 ${
                   isMerging
                     ? 'transition-all duration-[1500ms] ease-in-out'
                     : `transition-all duration-700 ${visibleStage >= 2 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`
@@ -313,19 +348,15 @@ const App: React.FC = () => {
               }`}>
                  <div className={`text-center transition-opacity duration-700 ${visibleStage >= 1 ? 'opacity-100' : 'opacity-0'}`}>
                     <div className="text-sm font-bold text-sprout-700 uppercase tracking-wide">Q1</div>
-                    <div className="text-xs text-slate-400 mt-0.5">Foundation</div>
                  </div>
                  <div className={`text-center transition-opacity duration-700 delay-100 ${visibleStage >= 2 ? 'opacity-100' : 'opacity-0'}`}>
                     <div className="text-sm font-bold text-sprout-700 uppercase tracking-wide">Q2</div>
-                    <div className="text-xs text-slate-400 mt-0.5">Ramp Up</div>
                  </div>
                  <div className={`text-center transition-opacity duration-700 delay-100 ${visibleStage >= 3 ? 'opacity-100' : 'opacity-0'}`}>
                     <div className="text-sm font-bold text-sprout-700 uppercase tracking-wide">Q3</div>
-                    <div className="text-xs text-slate-400 mt-0.5">Acceleration</div>
                  </div>
                  <div className={`text-center transition-opacity duration-700 delay-100 ${visibleStage >= 4 ? 'opacity-100' : 'opacity-0'}`}>
                     <div className="text-sm font-bold text-sprout-700 uppercase tracking-wide">Q4</div>
-                    <div className="text-xs text-slate-400 mt-0.5">Scale</div>
                  </div>
               </div>
 
