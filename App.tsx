@@ -72,6 +72,17 @@ const App: React.FC = () => {
     }, 1500);
   };
 
+  const handleAgentClick = (item: AgentItem) => {
+    if (selectedProduct === 'friday') {
+      setSelectedAgent(item);
+      return;
+    }
+
+    if (item.link) {
+      window.open(item.link, '_blank', 'noopener,noreferrer');
+    }
+  };
+
   // Handle back from modal
   const handleBackToRoadmap = () => {
     setShowUnifiedModal(false);
@@ -278,7 +289,7 @@ const App: React.FC = () => {
                     <AgentCard
                       key={item.id}
                       item={item}
-                      onClick={() => selectedProduct === 'friday' ? setSelectedAgent(item) : undefined}
+                      onClick={() => handleAgentClick(item)}
                       isJarvis={selectedProduct === 'jarvis'}
                     />
                   ))}
@@ -298,7 +309,7 @@ const App: React.FC = () => {
                     <AgentCard
                       key={item.id}
                       item={item}
-                      onClick={() => selectedProduct === 'friday' ? setSelectedAgent(item) : undefined}
+                      onClick={() => handleAgentClick(item)}
                       isJarvis={selectedProduct === 'jarvis'}
                     />
                   ))}
@@ -318,7 +329,7 @@ const App: React.FC = () => {
                     <AgentCard
                       key={item.id}
                       item={item}
-                      onClick={() => selectedProduct === 'friday' ? setSelectedAgent(item) : undefined}
+                      onClick={() => handleAgentClick(item)}
                       isJarvis={selectedProduct === 'jarvis'}
                     />
                   ))}
@@ -338,7 +349,7 @@ const App: React.FC = () => {
                     <AgentCard
                       key={item.id}
                       item={item}
-                      onClick={() => selectedProduct === 'friday' ? setSelectedAgent(item) : undefined}
+                      onClick={() => handleAgentClick(item)}
                       isJarvis={selectedProduct === 'jarvis'}
                     />
                   ))}

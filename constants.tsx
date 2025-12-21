@@ -420,7 +420,8 @@ export const JARVIS_ROADMAP_DATA: AgentItem[] = [
     goals: [{ type: GoalType.MAU, value: "TBD", description: "Placeholder" }],
     technicalDetails: ["Details coming soon"],
     chatScenarios: [],
-    category: "People Leader"
+    category: "People Leader",
+    link: "https://www.figma.com/proto/eGQOJiZAaRMHsGxiTeNyDt/%F0%9F%94%B7%F0%9F%94%B6-Unified-Sidekick-Central--IN-PROG--HAND-OFF---Copy-?page-id=13%3A927&node-id=4994-19136&viewport=84%2C-173%2C0.13&t=xzZ9Wycr98Zfzbhk-8&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=4906%3A52842&hide-ui=1"
   },
   // Q3 2026 - People Leader Category
   {
@@ -433,7 +434,8 @@ export const JARVIS_ROADMAP_DATA: AgentItem[] = [
     goals: [{ type: GoalType.MAU, value: "TBD", description: "Placeholder" }],
     technicalDetails: ["Details coming soon"],
     chatScenarios: [],
-    category: "People Leader"
+    category: "People Leader",
+    link: "https://www.figma.com/proto/eGQOJiZAaRMHsGxiTeNyDt/%F0%9F%94%B7%F0%9F%94%B6-Unified-Sidekick-Central--IN-PROG--HAND-OFF---Copy-?page-id=13%3A927&node-id=4994-15238&viewport=84%2C-173%2C0.13&t=xzZ9Wycr98Zfzbhk-8&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=4906%3A52842&hide-ui=1"
   },
   {
     id: "jarvis-pl-q3-2",
@@ -445,7 +447,8 @@ export const JARVIS_ROADMAP_DATA: AgentItem[] = [
     goals: [{ type: GoalType.MAU, value: "TBD", description: "Placeholder" }],
     technicalDetails: ["Details coming soon"],
     chatScenarios: [],
-    category: "People Leader"
+    category: "People Leader",
+    link: "https://www.figma.com/proto/eGQOJiZAaRMHsGxiTeNyDt/%F0%9F%94%B7%F0%9F%94%B6-Unified-Sidekick-Central--IN-PROG--HAND-OFF---Copy-?page-id=13%3A927&node-id=4994-20018&viewport=84%2C-173%2C0.13&t=xzZ9Wycr98Zfzbhk-8&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=4906%3A52842&hide-ui=1"
   },
   // Q4 2026 - People Leader Category
   {
@@ -458,7 +461,8 @@ export const JARVIS_ROADMAP_DATA: AgentItem[] = [
     goals: [{ type: GoalType.MAU, value: "TBD", description: "Placeholder" }],
     technicalDetails: ["Details coming soon"],
     chatScenarios: [],
-    category: "People Leader"
+    category: "People Leader",
+    link: "https://www.figma.com/proto/eGQOJiZAaRMHsGxiTeNyDt/%F0%9F%94%B7%F0%9F%94%B6-Unified-Sidekick-Central--IN-PROG--HAND-OFF---Copy-?page-id=13%3A927&node-id=4994-17283&viewport=84%2C-173%2C0.13&t=xzZ9Wycr98Zfzbhk-8&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=4906%3A52842&hide-ui=1"
   },
   // Q1 2026 - HR Manager Category
   {

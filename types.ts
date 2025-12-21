@@ -40,6 +40,7 @@ export interface AgentItem {
   technicalDetails: string[];
   chatScenarios: ChatScenario[];
   category?: string; // For Jarvis agents: 'Employee', 'People Leader', 'HR Manager', 'Sprout Internal'
+  link?: string; // Optional external link for Jarvis feature cards
   // Profile content
   whatItSolves?: {
     paragraphs: string[];
