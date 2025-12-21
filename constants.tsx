@@ -320,7 +320,8 @@ export const JARVIS_ROADMAP_DATA: AgentItem[] = [
     goals: [{ type: GoalType.MAU, value: "TBD", description: "Placeholder" }],
     technicalDetails: ["Details coming soon"],
     chatScenarios: [],
-    category: "Employee"
+    category: "Employee",
+    link: "https://www.figma.com/proto/eGQOJiZAaRMHsGxiTeNyDt/%F0%9F%94%B7%F0%9F%94%B6-Unified-Sidekick-Central--IN-PROG--HAND-OFF---Copy-?page-id=13%3A927&node-id=4994-14630&viewport=84%2C-173%2C0.13&t=xzZ9Wycr98Zfzbhk-8&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=4906%3A52842&hide-ui=1"
   },
   {
     id: "jarvis-emp-q1-2",
@@ -475,7 +476,8 @@ export const JARVIS_ROADMAP_DATA: AgentItem[] = [
     goals: [{ type: GoalType.MAU, value: "TBD", description: "Placeholder" }],
     technicalDetails: ["Details coming soon"],
     chatScenarios: [],
-    category: "HR Manager"
+    category: "HR Manager",
+    link: "https://www.figma.com/proto/eGQOJiZAaRMHsGxiTeNyDt/%F0%9F%94%B7%F0%9F%94%B6-Unified-Sidekick-Central--IN-PROG--HAND-OFF---Copy-?page-id=13%3A927&node-id=4908-89040&viewport=84%2C-173%2C0.13&t=xzZ9Wycr98Zfzbhk-8&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=4906%3A52842&hide-ui=1"
   },
   {
     id: "jarvis-hrm-q1-2",
@@ -487,7 +489,8 @@ export const JARVIS_ROADMAP_DATA: AgentItem[] = [
     goals: [{ type: GoalType.MAU, value: "TBD", description: "Placeholder" }],
     technicalDetails: ["Details coming soon"],
     chatScenarios: [],
-    category: "HR Manager"
+    category: "HR Manager",
+    link: "https://www.figma.com/proto/eGQOJiZAaRMHsGxiTeNyDt/%F0%9F%94%B7%F0%9F%94%B6-Unified-Sidekick-Central--IN-PROG--HAND-OFF---Copy-?page-id=13%3A927&node-id=4994-25741&viewport=84%2C-173%2C0.13&t=xzZ9Wycr98Zfzbhk-8&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=4906%3A52842&hide-ui=1"
   },
   {
     id: "jarvis-hrm-q1-3",
@@ -499,7 +502,8 @@ export const JARVIS_ROADMAP_DATA: AgentItem[] = [
     goals: [{ type: GoalType.MAU, value: "TBD", description: "Placeholder" }],
     technicalDetails: ["Details coming soon"],
     chatScenarios: [],
-    category: "HR Manager"
+    category: "HR Manager",
+    link: "https://www.figma.com/proto/eGQOJiZAaRMHsGxiTeNyDt/%F0%9F%94%B7%F0%9F%94%B6-Unified-Sidekick-Central--IN-PROG--HAND-OFF---Copy-?page-id=13%3A927&node-id=4939-20820&viewport=84%2C-173%2C0.13&t=xzZ9Wycr98Zfzbhk-8&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=4906%3A52842&hide-ui=1"
   },
   // Q2 2026 - HR Manager Category
   {
@@ -512,7 +516,8 @@ export const JARVIS_ROADMAP_DATA: AgentItem[] = [
     goals: [{ type: GoalType.MAU, value: "TBD", description: "Placeholder" }],
     technicalDetails: ["Details coming soon"],
     chatScenarios: [],
-    category: "HR Manager"
+    category: "HR Manager",
+    link: "https://www.figma.com/proto/eGQOJiZAaRMHsGxiTeNyDt/%F0%9F%94%B7%F0%9F%94%B6-Unified-Sidekick-Central--IN-PROG--HAND-OFF---Copy-?page-id=13%3A927&node-id=4994-20682&viewport=84%2C-173%2C0.13&t=xzZ9Wycr98Zfzbhk-8&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=4906%3A52842&hide-ui=1"
   },
   {
     id: "jarvis-hrm-q2-2",
@@ -524,7 +529,8 @@ export const JARVIS_ROADMAP_DATA: AgentItem[] = [
     goals: [{ type: GoalType.MAU, value: "TBD", description: "Placeholder" }],
     technicalDetails: ["Details coming soon"],
     chatScenarios: [],
-    category: "HR Manager"
+    category: "HR Manager",
+    link: "https://www.figma.com/proto/eGQOJiZAaRMHsGxiTeNyDt/%F0%9F%94%B7%F0%9F%94%B6-Unified-Sidekick-Central--IN-PROG--HAND-OFF---Copy-?page-id=13%3A927&node-id=4908-89040&viewport=84%2C-173%2C0.13&t=xzZ9Wycr98Zfzbhk-8&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=4906%3A52842&hide-ui=1"
   },
   {
     id: "jarvis-hrm-q2-3",
@@ -536,7 +542,8 @@ export const JARVIS_ROADMAP_DATA: AgentItem[] = [
     goals: [{ type: GoalType.MAU, value: "TBD", description: "Placeholder" }],
     technicalDetails: ["Details coming soon"],
     chatScenarios: [],
-    category: "HR Manager"
+    category: "HR Manager",
+    link: "https://www.figma.com/proto/eGQOJiZAaRMHsGxiTeNyDt/%F0%9F%94%B7%F0%9F%94%B6-Unified-Sidekick-Central--IN-PROG--HAND-OFF---Copy-?page-id=13%3A927&node-id=5710-41510&viewport=84%2C-173%2C0.13&t=xzZ9Wycr98Zfzbhk-8&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=4906%3A52842&hide-ui=1"
   },
   // Q3 2026 - HR Manager Category
   {
@@ -549,7 +556,8 @@ export const JARVIS_ROADMAP_DATA: AgentItem[] = [
     goals: [{ type: GoalType.MAU, value: "TBD", description: "Placeholder" }],
     technicalDetails: ["Details coming soon"],
     chatScenarios: [],
-    category: "HR Manager"
+    category: "HR Manager",
+    link: "https://www.figma.com/proto/eGQOJiZAaRMHsGxiTeNyDt/%F0%9F%94%B7%F0%9F%94%B6-Unified-Sidekick-Central--IN-PROG--HAND-OFF---Copy-?page-id=13%3A927&node-id=4994-20350&viewport=84%2C-173%2C0.13&t=xzZ9Wycr98Zfzbhk-8&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=4906%3A52842&hide-ui=1"
   },
   // Q1 2026 - Sprout Internal Category
   {
@@ -612,7 +620,8 @@ export const JARVIS_ROADMAP_DATA: AgentItem[] = [
     goals: [{ type: GoalType.MAU, value: "TBD", description: "Placeholder" }],
     technicalDetails: ["Details coming soon"],
     chatScenarios: [],
-    category: "Sprout Internal"
+    category: "Sprout Internal",
+    link: "https://www.figma.com/proto/eGQOJiZAaRMHsGxiTeNyDt/%F0%9F%94%B7%F0%9F%94%B6-Unified-Sidekick-Central--IN-PROG--HAND-OFF---Copy-?page-id=13%3A927&node-id=5664-40118&viewport=84%2C-173%2C0.13&t=xzZ9Wycr98Zfzbhk-8&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=4906%3A52842&hide-ui=1"
   },
   {
     id: "jarvis-si-q4-2",
@@ -624,6 +633,7 @@ export const JARVIS_ROADMAP_DATA: AgentItem[] = [
     goals: [{ type: GoalType.MAU, value: "TBD", description: "Placeholder" }],
     technicalDetails: ["Details coming soon"],
     chatScenarios: [],
-    category: "Sprout Internal"
+    category: "Sprout Internal",
+    link: "https://www.figma.com/proto/eGQOJiZAaRMHsGxiTeNyDt/%F0%9F%94%B7%F0%9F%94%B6-Unified-Sidekick-Central--IN-PROG--HAND-OFF---Copy-?page-id=13%3A927&node-id=4908-63736&viewport=84%2C-173%2C0.13&t=xzZ9Wycr98Zfzbhk-8&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=4906%3A52842&hide-ui=1"
   }
 ];
